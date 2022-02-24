@@ -1,7 +1,7 @@
 {
-  "alwaysRun": false,
+  "alwaysRun": true,
   "recursiveFolderSearch": true,
-  "foldersToProcess": ["js", "css", "build"],
+  "foldersToProcess": [""],
   "uglifyJsOptions": {
     "compress": {
       "drop_console": true
