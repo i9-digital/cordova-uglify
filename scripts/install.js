@@ -55,7 +55,6 @@ fs.writeFileSync(uglifyAfterPreparePath, uglifyFile);
 var uglifyConfigFile = fs.readFileSync(
   path.join(__dirname, '../uglify-config.json')
 );
-fs.writeFileSync(path.join(paths[0], 'uglify-config.json'), uglifyConfigFile);
 
 var configFilePath = path.join(cwd, '../../', 'config.xml'); // top-level config.xml
 var configFileData = fs.readFileSync(configFilePath);
@@ -63,6 +62,8 @@ var configFileData = fs.readFileSync(configFilePath);
 if (configFileData.indexOf('hooks/after_prepare/uglify.js') > -1) {
   return;
 }
+
+fs.writeFileSync(path.join(paths[0], 'uglify-config.json'), uglifyConfigFile);
 
 var parser = new xml2js.Parser();
 parser.parseString(configFileData, function(err, result) {
