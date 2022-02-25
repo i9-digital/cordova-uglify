@@ -14,7 +14,9 @@
     "clean-css": "4.2.1",
     "ng-annotate": "0.15.4",
     "uglify-js": "3.3.16",
-    "xml2js": "0.4.23"
+    "xml2js": "0.4.23",
+    "browserify": "^17.0.0",
+    "@babel/core": "^7.12.17"
   },
   "author": "Ross Martin",
   "license": "MIT",
