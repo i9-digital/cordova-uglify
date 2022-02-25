@@ -1,15 +1,12 @@
 {
   "alwaysRun": true,
   "recursiveFolderSearch": true,
-  "foldersToProcess": [""],
+  "foldersToProcess": ["plugins"],
   "uglifyJsOptions": {
     "compress": {
       "drop_console": true
     },
-    "mangle": false,
-    "output": {
-      "code": true
-    }
+    "mangle": false
   },
   "cleanCssOptions": {
     "specialComments": "all"
