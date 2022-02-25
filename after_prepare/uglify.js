@@ -74,7 +74,11 @@ module.exports = function(ctx) {
 
         fs.stat(file, function(err, stat) {
           if (stat.isFile()) {
-            compress(file);
+            try {
+              compress(file);
+            } catch (e) {
+              console.error(file, e);
+            }
             return;
           }
 
