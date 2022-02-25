@@ -1,7 +1,7 @@
 {
   "alwaysRun": true,
   "recursiveFolderSearch": true,
-  "foldersToProcess": ["plugins"],
+  "foldersToProcess": ["plugins", "cordova-js-src"],
   "uglifyJsOptions": {
     "compress": {
       "drop_console": true
