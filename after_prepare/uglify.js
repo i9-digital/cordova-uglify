@@ -6,9 +6,11 @@ module.exports = function(ctx) {
 
   var fs = require('fs'),
     path = require('path'),
-    UglifyJS = require('uglify-js'),
+    UglifyJS = require('uglify-js-es6'),
     CleanCSS = require('clean-css'),
     ngAnnotate = require('ng-annotate'),
+    browserify = require("browserify"),
+    babelify = require("babelify"),
     rootDir = ctx.opts.projectRoot,
     platformPath = path.join(rootDir, 'platforms'),
     platforms = ctx.opts.cordova.platforms,
@@ -38,7 +40,7 @@ module.exports = function(ctx) {
         res = ngAnnotate(String(fs.readFileSync(file, 'utf8')), {
           add: true,
         });
-        result = UglifyJS.minify(res.src, hookConfig.uglifyJsOptions);
+        result = UglifyJS.minify(file, hookConfig.uglifyJsOptions);
         fs.writeFileSync(file, result.code, 'utf8'); // overwrite the original unminified file
         break;
 
