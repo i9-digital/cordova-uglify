@@ -4,7 +4,7 @@
   "foldersToProcess": ["plugins", "cordova-js-src"],
   "uglifyJsOptions": {
     "compress": {
-      "drop_console": true
+      "drop_console": false
     },
     "mangle": false
   },
